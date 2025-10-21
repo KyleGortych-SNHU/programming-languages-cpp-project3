@@ -1,0 +1,59 @@
+@startuml
+!theme reddress-darkred
+title Project Structure & File Relationships
+
+' Root package
+package "Project Root" {
+
+    ' Data folder
+    folder "data" {
+        file "CS210_Project_Three_Input_File.txt"
+    }
+
+    ' Output folder (generated files)
+    folder "output" {
+        file "frequency.dat"
+    }
+
+    ' Docs folder with diagrams subfolder
+    folder "docs" {
+        folder "diagrams" {
+            file "files.puml"
+            file "files.svg"
+            file "uml.puml"
+            file "uml.svg"
+        }
+    }
+
+    ' Include folder
+    folder "include" {
+        [ProduceFrequency.h] as HeaderFile
+    }
+
+    ' Src folder
+    folder "src" {
+        [ProduceFrequency.cpp] as SourceFile
+        [main.cpp] as MainFile
+    }
+
+    ' Build folder with executable
+    folder "build" {
+        file "producefrequency"
+    }
+}
+
+' File reference relationships
+MainFile --> HeaderFile : #include
+SourceFile --> HeaderFile : #include
+
+note right of SourceFile
+  Implements ProduceFrequency methods
+  declared in ProduceFrequency.h
+end note
+
+note bottom of MainFile
+  Entry point:
+  - Instantiates ProduceFrequency
+  - Calls RunMenu()
+end note
+@enduml

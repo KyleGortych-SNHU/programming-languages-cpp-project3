@@ -1,0 +1,48 @@
+@startuml
+!theme reddress-darkred
+title Produce Purchase Frequency Analyzer
+
+' Header file package
+package "Header File: ProduceFrequency.h" {
+    class ProduceFrequency {
+        - std::map<std::string, int> m_itemFrequency
+        - std::string m_inputFileName
+        - std::string m_backupFileName
+
+        + ProduceFrequency()
+        + void LoadDataFromFile()
+        + int GetItemFrequency(const std::string& item) const
+        + void PrintAllFrequencies() const
+        + void PrintHistogram() const
+        + void WriteBackupFile() const
+        + void RunMenu()
+    }
+}
+
+' Implementation file package
+package "Source File: ProduceFrequency.cpp" {
+    ' We don't need a separate class here — just a note referencing the implementation
+    note right of ProduceFrequency
+        Defined in ProduceFrequency.cpp:
+        - Loads data from file into map
+        - Handles string conversion
+        - Backs up data to file
+        - Outputs frequencies and histograms
+        - Interacts via user menu
+    end note
+}
+
+' Main program entry point
+package "main.cpp" {
+    class main
+
+    main --> ProduceFrequency : creates and uses
+
+    note bottom of main
+        Entry point:
+        - Instantiates ProduceFrequency
+        - Calls RunMenu()
+    end note
+}
+
+@enduml
