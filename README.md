@@ -18,7 +18,7 @@ Programming languages class with C++ Project 3.
     An improvment I could make is to finish implementing the exception handling.
 
     <details>
-    <summary>example</summary>
+    <summary>main.cpp exception (click me)</summary>
     
     ```cpp
     int main () {
@@ -43,7 +43,7 @@ Programming languages class with C++ Project 3.
 
 
     <details>
-    <summary>User validation example</summary>
+    <summary>User validation example (click me)</summary>
     
     ```cpp
     // check for empty input or non number
