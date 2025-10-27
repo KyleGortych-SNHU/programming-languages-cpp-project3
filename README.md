@@ -1,6 +1,28 @@
 # programming-languages-cpp-project3
 Programming languages class with C++ Project 3.
 
+## Getting Started
+
+<details>
+<summary>Commands (click me)</summary>
+
+To build 
+```sh
+make
+```
+
+To run the executable
+```sh
+make run
+```
+
+To clean
+```sh
+make clean
+```
+
+</details>
+
 ## Reflection
 
 - Summarize the project and what problem it was solving.
@@ -11,14 +33,15 @@ Programming languages class with C++ Project 3.
 
 - What did you do particularly well?
 
-    I feel I implmeneted the .
+    I feel I started well by first making the uml via plantuml. By first laying
+    out what the header would entail it made it easier to implement.
 
 - Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
 
     An improvment I could make is to finish implementing the exception handling.
 
     <details>
-    <summary>main.cpp exception (click me)</summary>
+    <summary>main.cpp Exception (click me)</summary>
     
     ```cpp
     int main () {
@@ -39,11 +62,14 @@ Programming languages class with C++ Project 3.
 
 - Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?
 
-    The most challengin parts I found was implementing the user validation and histogram layout. I used the .
+    The most challengin parts I found was implementing the user validation and
+    histogram layout. I used the [Python
+    Tutor](https://pythontutor.com/cpp.html#) for help visualizing and
+    debuging. 
 
 
     <details>
-    <summary>User validation example (click me)</summary>
+    <summary>User Validation Example (click me)</summary>
     
     ```cpp
     // check for empty input or non number

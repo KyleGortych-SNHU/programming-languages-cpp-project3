@@ -24,14 +24,19 @@ SRC = $(SRC_DIR)/main.cpp $(SRC_DIR)/ProduceFrequency.cpp
 ifeq ($(OS),Windows_NT)
     OUT = producefrequencyExe.exe
     RM = del /Q
+		RUN = $(OUT)
 else
     OUT = producefrequencyExe
     RM = rm -f
+		RUN = ./$(OUT)
 endif
 
 # Build
 all:
 	$(CXX) -I$(INCLUDE_DIR) $(SRC) -o $(OUT)
+
+run: all
+	$(RUN)
 
 # Clean
 clean:
