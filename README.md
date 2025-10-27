@@ -65,7 +65,7 @@ make clean
     The most challengin parts I found was implementing the user validation and
     histogram layout. I used the [Python
     Tutor](https://pythontutor.com/cpp.html#) for help visualizing and
-    debuging. 
+    debuging via the stack and heap layout. 
 
 
     <details>
@@ -125,9 +125,10 @@ make clean
 
 - What skills from this project will be particularly transferable to other projects or course work?
 
-    The most transferable part of this project is the directory layout and use of
-    the make file. By having specific paths for c++ projects it helps in making it
-    easier for implementing the make file and overall simplicity in .
+    The most transferable part of this project is the directory layout and use
+    of the make file. By having specific paths for c++ projects it helps in
+    making it easier for implementing the make file and overall simplicity for
+    the end user running it.
 
 
 - How did you make this program maintainable, readable, and adaptable?
